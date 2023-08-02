@@ -1,0 +1,51 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--Sag Ust Butonlar-->
+    <Style x:Key="right-top-btn" TargetType="Button">
+        <Setter Property="Width" Value="25"/>
+        <Setter Property="Height" Value="25"/>
+        <Setter Property="Background" Value="{x:Null}"/>
+
+        <!--Butona tiklandiginda yapilacaklar-->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="Border"
+                                BorderThickness="0,0,0,0"
+                                BorderBrush="{x:Null}"
+                                Background="{x:Null}">
+                        <ContentPresenter HorizontalAlignment="center" VerticalAlignment="center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Kapatma butonu-->
+    <Style x:Key="right-top-exit-img" TargetType="Image">
+        <Setter Property="Source" Value="/images/icons/exit-button-1.png"/>
+        <Setter Property="Width" Value="20"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Source" Value="/images/icons/exit-button-2.png"/>
+                <Setter Property="Cursor" Value="Hand"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--Simge durumuna getirme butonu-->
+    <Style x:Key="right-top-min-img" TargetType="Image">
+        <Setter Property="Source" Value="/images/icons/min-button-1.png"/>
+        <Setter Property="Width" Value="20"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Source" Value="/images/icons/min-button-2.png"/>
+                <Setter Property="Cursor" Value="Hand"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>
